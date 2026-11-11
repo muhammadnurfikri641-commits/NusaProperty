@@ -1,89 +1,183 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
-    />
+<!DOCTYPE html>
+<html lang="id">
 
-    <!-- Demo styles -->
-    <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
 
-      body {
-        background: #000;
-        font-family:
-          Helvetica Neue,
-          Helvetica,
-          Arial,
-          sans-serif;
-        font-size: 14px;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jelajahi tiga properti pilihan bersama NusaProperti.">
+  <title>Latihan Properti — NusaProperti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
 
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
 
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #444;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="NgawiProperti — kembali ke beranda">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 9.5L12 3l9 6.5"></path>
+            <path d="M19 13v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path>
+          </svg>
+        </span>
+        NgawiProperti
+      </a>
+      <a class="contact-link" href="index.html#contacts">Hubungi Kami</a>
+    </header>
 
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
-  </head>
 
-  <body>
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <span class="eyebrow">Koleksi Properti</span>
+        <h1 id="page-title">Temukan hunian yang terasa seperti rumah</h1>
+        <p>
+          Pilihan rumah dan vila di lokasi strategis, dikurasi untuk membantu Anda menemukan tempat yang sesuai dengan
+          kebutuhan dan gaya hidup.
+        </p>
+      </section>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
+      <section class="property-slider swiper mySwiper" aria-label="Tiga properti pilihan">
+        <div class="swiper-wrapper">
+        <article class="property-card swiper-slide">
+          <div class="card-image-wrap">
+            <img class="card-image" src="assets/property-1.jpg"
+              alt="Vila modern dengan kolam renang dan pemandangan laut" loading="lazy">
+            <span class="badge">Unggulan</span>
+          </div>
+          <div class="card-content">
+            <p class="location">Pantai Indah Kapuk, Jakarta Utara</p>
+            <h2 class="property-name">Vila Samudra</h2>
+            <div class="specs">
+              <span>4 kamar tidur</span>
+              <span>2 kamar mandi</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Harga properti</span>
+              <span class="price">Rp 8,5 M</span>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="property-card swiper-slide">
+          <div class="card-image-wrap">
+            <img class="card-image" src="assets/property-2.jpg"
+              alt="Rumah modern dengan halaman hijau di Bandung" loading="lazy">
+            <span class="badge">Populer</span>
+          </div>
+          <div class="card-content">
+            <p class="location">Setiabudi, Bandung</p>
+            <h2 class="property-name">Rumah Setiabudi</h2>
+            <div class="specs">
+              <span>3 kamar tidur</span>
+              <span>2 kamar mandi</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Harga properti</span>
+              <span class="price">Rp 4,2 M</span>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="property-card swiper-slide">
+          <div class="card-image-wrap">
+            <img class="card-image" src="assets/property-3.jpg" alt="Vila minimalis di tengah suasana hijau"
+              loading="lazy">
+            <span class="badge">Terverifikasi</span>
+          </div>
+          <div class="card-content">
+            <p class="location">Canggu, Kabupaten Badung, Bali</p>
+            <h2 class="property-name">Vila Cemara</h2>
+            <div class="specs">
+              <span>3 kamar tidur</span>
+              <span>1 kamar mandi</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Harga properti</span>
+              <span class="price">Rp 3,75 M</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card swiper-slide">
+          <div class="card-image-wrap">
+            <img class="card-image" src="assets/property-3.jpg" alt="Vila minimalis di tengah suasana hijau"
+              loading="lazy">
+            <span class="badge">Terverifikasi</span>
+          </div>
+          <div class="card-content">
+            <p class="location">Canggu, Kabupaten Badung, Bali</p>
+            <h2 class="property-name">Vila Cemara</h2>
+            <div class="specs">
+              <span>3 kamar tidur</span>
+              <span>1 kamar mandi</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Harga properti</span>
+              <span class="price">Rp 3,75 M</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card swiper-slide">
+          <div class="card-image-wrap">
+            <img class="card-image" src="assets/property-3.jpg" alt="Vila minimalis di tengah suasana hijau"
+              loading="lazy">
+            <span class="badge">Terverifikasi</span>
+          </div>
+          <div class="card-content">
+            <p class="location">Canggu, Kabupaten Badung, Bali</p>
+            <h2 class="property-name">Vila Cemara</h2>
+            <div class="specs">
+              <span>3 kamar tidur</span>
+              <span>1 kamar mandi</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Harga properti</span>
+              <span class="price">Rp 3,75 M</span>
+            </div>
+          </div>
+        </article>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination" aria-label="Pilih slide"></div>
+      </section>
+
+
+      <p class="page-note">Informasi harga dan ketersediaan dapat berubah. Hubungi tim kami untuk detail terbaru.</p>
+    </main>
+  </div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+  <script>
+        var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       });
-    </script>
-  </body>
+  </script>
+</body>
+
+
 </html>
+
