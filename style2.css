@@ -1,0 +1,309 @@
+:root {
+  --navy: #1b4468;
+  --navy-dark: #14324d;
+  --ink: #1f2d3a;
+  --slate: #5b6673;
+  --gold: #efbd87;
+  --check: #ff7300;
+  --surface: #f5f7fa;
+  --navbar-height: 80px; 
+}
+
+
+.container-site {
+  width: 100%;
+}
+
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-weight: 800;
+}
+
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(90deg, rgba(5, 25, 40, 0.92) 0%, rgba(5, 25, 40, 0.78) 35%, rgba(5, 25, 40, 0.38) 100%),
+    url('assets/hero-villa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  min-height: calc(100vh - var(--navbar-height));
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.hero-title span {
+  color: var(--gold);
+}
+
+.hero-subtitle {
+  max-width: 500px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.tentang-kami {
+  padding: 100px 0;
+  background: var(--surface);
+}
+
+.tentang-kami .container {
+  max-width: 1400px;
+}
+
+.tentang-kami .row {
+  --bs-gutter-x: 4rem;
+}
+
+.featured-wrap {
+  position: relative;
+}
+
+.featured-house {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(20, 50, 77, 0.18);
+  object-fit: cover;
+}
+
+.stat-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  line-height: 1.2;
+}
+
+.stat-badge strong {
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.stat-badge span {
+  color: var(--slate);
+  font-size: 0.75rem;
+}
+
+.tentang-kami-title {
+  margin-bottom: 1.25rem;
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.tentang-kami-desc {
+  margin-bottom: 1rem;
+  color: var(--slate);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+
+.checklist {
+  margin: 1.5rem 0 2rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.check i {
+  color: var(--check);
+  font-size: 0.8rem;
+}
+
+
+.property-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 250ms, transform 250ms;
+}
+
+.property-btn:hover {
+  background: var(--navy-dark);
+  transform: translateY(-2px);
+}
+
+.property-btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.contact-section {
+     padding: 54px 24px 84px;
+      background: #f7f8fa; 
+    }
+
+.contact-heading {
+     margin: 0 auto 36px;
+      text-align: center; 
+    }
+
+.contact-heading h2 { 
+    margin: 0 0 10px;
+     color: #194668;
+      font-size: clamp(25px, 3vw, 34px);
+       font-weight: 750; 
+    }
+
+.contact-heading p { 
+    margin: 0;
+     color: #647b8c; 
+     font-size: 14px; 
+    }
+
+.contact-cards {
+     width: min(1090px, 100%);
+      margin: 0 auto;
+       display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+         gap: 20px; 
+        }
+.contact-card { 
+    min-height: 208px;
+     padding: 27px;
+      border: 1px solid #e8ecf0; 
+      border-radius: 17px; background: #fff;
+       box-shadow: 0 12px 34px rgba(25,70,104,.08); 
+    }
+
+.contact-icon {
+     width: 44px; 
+     height: 44px; display: grid;
+      place-items: center;
+       margin-bottom: 16px;
+        border-radius: 50%; 
+        background: #edf1f4;
+         color: #194668; 
+         font-size: 18px;
+         }
+
+.contact-card h3, .site-footer h3 {
+     margin: 0 0 8px;
+      color: #194668;
+       font-size: 15px;
+        font-weight: 750;
+     }
+
+.contact-card p { 
+    min-height: 40px;
+     margin: 0 0 10px; 
+     color: #647b8c; 
+     font-size: 13px;
+     }
+     
+.contact-card a, .contact-card  {
+     color: #194668;
+      font-size: 13px;
+       font-weight: 600; 
+    }
+.site-footer {
+     padding: 46px 24px 15px;
+      background: #194668;
+       color: #d4e0e9; 
+    }
+
+.footer-grid {
+     width: min(1125px, 100%); 
+     margin: 0 auto; display: grid;
+      grid-template-columns: 1.35fr 1fr 1.15fr .8fr; gap: 48px; 
+    }
+
+.footer-brand { 
+    display: inline-flex; 
+    align-items: center; gap: 10px; 
+    margin-bottom: 16px; color: #fff; 
+    font-size: 19px;
+     font-weight: 750;
+     }
+
+.footer-tagline {
+     max-width: 245px;
+      color: #fff; 
+      font-size: 13px;
+       font-weight: 600; 
+       line-height: 1.7;
+     }
+
+.site-footer h3 {
+     margin-bottom: 14px;
+      color: #fff;
+     }
+
+.site-footer .footer-grid > div > a:not(.footer-brand), .site-footer .footer-grid > div > span { display:
+     flex; gap: 9px;
+      margin-bottom: 10px;
+       color: #c5d4df;
+        font-size: 13px;
+         line-height: 1.5; 
+        }
+
+.site-footer i {
+     min-width: 14px; 
+     color: #9db6c8;
+     }
+
+.footer-bottom {
+     width: min(1125px, 100%);
+      margin: 28px auto 0;
+       padding-top: 19px;
+        border-top: 1px solid rgba(255,255,255,.15);
+         color: #b9ccd9; font-size: 12px;
+          text-align: center;
+         }
+
+@media (max-width: 991px) {
+  .contact-cards { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; }
+  .tentang-kami {
+    padding: 60px 0;
+  }
+
+  .featured-house {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 420px) { .footer-grid { grid-template-columns: 1fr; } }
